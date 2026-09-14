@@ -1,539 +1,460 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Badsha Faysal | Senior Structural Detailer — Steel & Civil</title>
   <meta name="description" content="Senior Structural Detailer specializing in Tekla Structures, fabrication-ready steel detailing, shop drawings, erection plans and BOM for industrial projects." />
-  <meta name="theme-color" content="#0b1220" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            ink: { 950: '#070b14', 900: '#0b1220', 800: '#111827', 700: '#1e293b' },
-            gold: { 300: '#fcd34d', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
-        }
-      }
-    }
-  </script>
+  <meta name="theme-color" content="#0a0f1a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    body { background: #0b1220; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; }
-    html:not(.dark) body { background: #f8f7f4; color: #0f172a; }
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .gold-text { background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    html:not(.dark) .gold-text { background: linear-gradient(135deg, #d97706, #b45309); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .nav-blur { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
-    .project-card { transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease; }
-    .project-card:hover { transform: translateY(-6px); }
-    .project-card img { transition: transform 0.7s cubic-bezier(0.22,1,0.36,1); }
-    .project-card:hover img { transform: scale(1.06); }
-    .service-card { transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease; }
-    .service-card:hover { transform: translateY(-4px); }
-    .btn-primary { background: linear-gradient(135deg, #f59e0b, #d97706); color: #0b1220; font-weight: 600; transition: all 0.25s ease; }
-    .btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 10px 25px -5px rgba(245,158,11,0.35); }
-    .btn-ghost { border: 1px solid rgba(148,163,184,0.3); transition: all 0.25s ease; }
-    .btn-ghost:hover { border-color: #f59e0b; color: #fbbf24; }
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #0b1220; }
-    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="antialiased">
+<body>
 
   <!-- NAV -->
-  <header id="nav" class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-white/5 bg-[#0b1220]/85">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="flex items-center justify-between h-[72px]">
-        <a href="#home" class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-ink-900 font-bold text-sm shadow-lg shadow-gold-500/20">BF</div>
-          <div class="hidden sm:block">
-            <div class="font-semibold text-[15px] tracking-tight leading-none">Badsha Faysal</div>
-            <div class="text-[11px] text-slate-400 tracking-wider uppercase mt-0.5">Structural Detailer</div>
-          </div>
-        </a>
-        <nav class="hidden lg:flex items-center gap-9 text-[13px] font-medium text-slate-300">
-          <a href="#services" class="hover:text-gold-400 transition-colors">Services</a>
-          <a href="#projects" class="hover:text-gold-400 transition-colors">Portfolio</a>
-          <a href="#process" class="hover:text-gold-400 transition-colors">Process</a>
-          <a href="#about" class="hover:text-gold-400 transition-colors">About</a>
-          <a href="#contact" class="hover:text-gold-400 transition-colors">Contact</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <button id="theme-toggle" aria-label="Toggle theme" class="p-2.5 rounded-lg border border-white/10 hover:border-gold-500/40 text-slate-300 hover:text-gold-400 transition">
-            <svg class="w-4 h-4 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-            <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          </button>
-          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg btn-primary text-sm">
-            Request a Review
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-          <button id="mobile-btn" class="lg:hidden p-2 text-slate-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <div class="logo-mark" aria-hidden="true">
+          <!-- Steel beam / structure icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+            <path d="M8 6v12M16 6v12"/>
+            <path d="M4 6l4-3h8l4 3"/>
+          </svg>
         </div>
+        <div class="logo-text">
+          <strong>Badsha Faysal</strong>
+          <span>Structural Detailer</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+          <svg class="sun" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg class="moon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-primary hidden-sm">
+          Request a Review
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <button id="mobile-btn" class="icon-btn" style="display:flex" aria-label="Menu">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/5 bg-ink-900">
-      <div class="px-5 py-4 space-y-1 text-sm">
-        <a href="#services" class="block py-2.5 text-slate-300 hover:text-gold-400">Services</a>
-        <a href="#projects" class="block py-2.5 text-slate-300 hover:text-gold-400">Portfolio</a>
-        <a href="#process" class="block py-2.5 text-slate-300 hover:text-gold-400">Process</a>
-        <a href="#about" class="block py-2.5 text-slate-300 hover:text-gold-400">About</a>
-        <a href="#contact" class="block py-2.5 text-slate-300 hover:text-gold-400">Contact</a>
-      </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#services">Services</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section id="home" class="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
-    <div class="absolute top-1/4 -right-32 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full relative z-10">
-      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-        <div class="reveal">
-          <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-gold-500/20 bg-gold-500/5 text-gold-400 text-[11px] font-semibold tracking-wider uppercase mb-7">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            Structural Steel Detailer · Tekla Structures
-          </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.12] tracking-tight mb-6">
-            Fabrication-ready<br>steel detailing for<br>teams that need<br>
-            <span class="gold-text">clear, coordinated</span><br>deliverables.
-          </h1>
-          <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg mb-9">
-            I support steel fabricators, engineering teams and contractors with coordinated Tekla models, shop drawings, erection drawings, connection detailing and material reports.
-          </p>
-          <div class="flex flex-wrap gap-4 mb-12">
-            <a href="#contact" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl btn-primary text-[15px]">
-              Request a Project Review
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-            <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl btn-ghost text-[15px] text-slate-300">
-              View Project Experience
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-          </div>
-          <div class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-slate-500 tracking-wide uppercase">
-            <span>Based in Dhaka</span>
-            <span class="text-slate-700">·</span>
-            <span>International Project Support</span>
-          </div>
+  <section id="home" class="hero">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Structural Steel Detailer · Tekla Structures
         </div>
+        <h1>
+          Fabrication-ready<br>
+          steel detailing for<br>
+          teams that need<br>
+          <span class="gold-text">clear, coordinated</span><br>
+          deliverables.
+        </h1>
+        <p>
+          I support steel fabricators, engineering teams and contractors with coordinated Tekla models, shop drawings, erection drawings, connection detailing and material reports.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">
+            Request a Project Review
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            View Project Experience
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span>Based in Dhaka</span>
+          <span>·</span>
+          <span>International Project Support</span>
+        </div>
+      </div>
 
-        <div class="reveal relative" style="transition-delay:0.15s">
-          <div class="absolute -inset-3 bg-gradient-to-br from-gold-500/20 via-transparent to-blue-500/10 rounded-3xl blur-2xl"></div>
-          <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-ink-800 shadow-2xl shadow-black/40">
-            <div class="px-5 py-3.5 border-b border-white/5 flex items-center justify-between">
-              <span class="text-[11px] font-medium tracking-wider text-slate-400 uppercase">Model Study / Multi-storey Structural Steel</span>
-            </div>
-            <div class="relative aspect-[4/3] bg-slate-900">
-              <img src="images/project-04.jpg" alt="Multi-storey steel frame" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-transparent to-transparent"></div>
-              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-ink-900/90 border border-white/10 text-sm font-medium backdrop-blur-sm">
-                <span class="w-7 h-7 rounded-full bg-gold-500 text-ink-900 flex items-center justify-center">
-                  <svg class="w-3.5 h-3.5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </span>
-                Play 3D Model
-              </div>
-            </div>
-            <div class="px-5 py-4 flex items-center justify-between">
-              <div>
-                <div class="font-semibold text-sm">Multi-storey Steel Frame</div>
-                <div class="text-xs text-slate-500 mt-0.5">Repeated floor beam bays · Full coordination</div>
-              </div>
-              <a href="#projects" class="text-xs text-gold-400 hover:text-gold-300 font-medium flex items-center gap-1">
-                Explore the model
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </a>
-            </div>
+      <!-- Real 3D Video -->
+      <div class="reveal video-card" style="transition-delay:0.12s">
+        <div class="video-card-header">Model Study · Multi-storey Structural Steel</div>
+        <div class="video-wrap">
+          <video
+            src="videos/portfolio-reel.mp4"
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="images/project-04.jpg"
+          ></video>
+        </div>
+        <div class="video-card-footer">
+          <div>
+            <strong>3D Steel Structure Reel</strong>
+            <span>Tekla models · Framing · Bracing · Coordination</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILL BAR -->
-  <div class="border-y border-white/5 bg-ink-900/50">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex flex-wrap justify-center gap-x-10 gap-y-2 text-[12px] tracking-wider uppercase text-slate-500">
-      <span>Tekla Structures</span>
-      <span>AutoCAD</span>
-      <span>Fabrication Documentation</span>
-      <span>Model Coordination</span>
-      <span>BOM / MTO</span>
-      <span>International Project Support</span>
-    </div>
+  <div class="skill-bar">
+    <span>Tekla Structures</span>
+    <span>AutoCAD</span>
+    <span>Fabrication Documentation</span>
+    <span>Model Coordination</span>
+    <span>BOM / MTO</span>
+    <span>International Project Support</span>
   </div>
 
   <!-- SERVICES -->
-  <section id="services" class="py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="grid lg:grid-cols-12 gap-10 mb-16">
-        <div class="lg:col-span-7 reveal">
-          <p class="text-gold-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">01 / Detailing Support</p>
-          <h2 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-tight">
-            From engineering information<br>to practical deliverables.
-          </h2>
-        </div>
-        <div class="lg:col-span-5 flex items-end reveal" style="transition-delay:0.1s">
-          <p class="text-slate-400 text-base leading-relaxed">
-            Focused structural-steel detailing services for fabrication teams, engineering firms and contractors who need clear, coordinated production files.
-          </p>
-        </div>
+  <section id="services">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-label">01 / Detailing Support</p>
+        <h2 class="section-title">From engineering information<br>to practical deliverables.</h2>
+        <p class="section-desc">Focused structural-steel detailing services for fabrication teams, engineering firms and contractors who need clear, coordinated production files.</p>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <article class="service-card reveal group p-7 rounded-2xl border border-white/5 bg-ink-800/40 hover:border-gold-500/30 hover:bg-ink-800/70">
-          <div class="text-gold-500/40 text-3xl font-bold mb-5 group-hover:text-gold-500/70 transition">01</div>
-          <h3 class="text-lg font-semibold mb-2.5">Tekla 3D Modelling</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-5">Coordinated structural-steel models with clear member orientation, levels and interfaces before drawing production.</p>
-          <a href="#contact" class="text-xs font-medium text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">Discuss this service <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-        </article>
-        <article class="service-card reveal group p-7 rounded-2xl border border-white/5 bg-ink-800/40 hover:border-gold-500/30 hover:bg-ink-800/70" style="transition-delay:0.05s">
-          <div class="text-gold-500/40 text-3xl font-bold mb-5 group-hover:text-gold-500/70 transition">02</div>
-          <h3 class="text-lg font-semibold mb-2.5">Shop & Fabrication Drawings</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-5">Assembly and single-part drawings that communicate how each piece is cut, welded, bolted and assembled.</p>
-          <a href="#contact" class="text-xs font-medium text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">Discuss this service <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-        </article>
-        <article class="service-card reveal group p-7 rounded-2xl border border-white/5 bg-ink-800/40 hover:border-gold-500/30 hover:bg-ink-800/70" style="transition-delay:0.1s">
-          <div class="text-gold-500/40 text-3xl font-bold mb-5 group-hover:text-gold-500/70 transition">03</div>
-          <h3 class="text-lg font-semibold mb-2.5">GA & Erection Drawings</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-5">Clear member identification, dimensions and levels to support site coordination and the erection sequence.</p>
-          <a href="#contact" class="text-xs font-medium text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">Discuss this service <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-        </article>
-        <article class="service-card reveal group p-7 rounded-2xl border border-white/5 bg-ink-800/40 hover:border-gold-500/30 hover:bg-ink-800/70" style="transition-delay:0.15s">
-          <div class="text-gold-500/40 text-3xl font-bold mb-5 group-hover:text-gold-500/70 transition">04</div>
-          <h3 class="text-lg font-semibold mb-2.5">Connection Detailing</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-5">Translate approved connection requirements into legible model and drawing details, with access and tool clearance in mind.</p>
-          <a href="#contact" class="text-xs font-medium text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">Discuss this service <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-        </article>
-        <article class="service-card reveal group p-7 rounded-2xl border border-white/5 bg-ink-800/40 hover:border-gold-500/30 hover:bg-ink-800/70" style="transition-delay:0.2s">
-          <div class="text-gold-500/40 text-3xl font-bold mb-5 group-hover:text-gold-500/70 transition">05</div>
-          <h3 class="text-lg font-semibold mb-2.5">BOM & MTO Reporting</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-5">Organised material quantities, bolt lists and agreed production files drawn from the coordinated model.</p>
-          <a href="#contact" class="text-xs font-medium text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">Discuss this service <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-        </article>
-        <article class="service-card reveal group p-7 rounded-2xl border border-white/5 bg-ink-800/40 hover:border-gold-500/30 hover:bg-ink-800/70" style="transition-delay:0.25s">
-          <div class="text-gold-500/40 text-3xl font-bold mb-5 group-hover:text-gold-500/70 transition">06</div>
-          <h3 class="text-lg font-semibold mb-2.5">As-Built & Retrofitting</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-5">Accurate as-built documentation and practical retrofitting designs for existing RCC and steel structures.</p>
-          <a href="#contact" class="text-xs font-medium text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">Discuss this service <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <!-- FABRICATION FIRST -->
-  <section class="py-20 border-y border-white/5 bg-ink-900/40">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-          <p class="text-gold-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">02 / Fabrication First</p>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight mb-6">
-            A model that looks correct is not enough.<br>
-            <span class="gold-text">The steel must also be practical to fabricate and erect.</span>
-          </h2>
-          <p class="text-slate-400 leading-relaxed">
-            I turn engineering drawings into coordinated Tekla models and clear fabrication-ready drawings that help steel fabricators cut, weld, bolt, assemble and erect steel with fewer questions.
-          </p>
-        </div>
-        <div class="reveal space-y-4" style="transition-delay:0.1s">
-          <div class="flex gap-4 p-4 rounded-xl border border-white/5 bg-ink-800/30"><span class="text-gold-500 font-bold text-sm w-6">01</span><span class="text-sm text-slate-300">Fabrication and welding access</span></div>
-          <div class="flex gap-4 p-4 rounded-xl border border-white/5 bg-ink-800/30"><span class="text-gold-500 font-bold text-sm w-6">02</span><span class="text-sm text-slate-300">Bolt installation, tightening and tool clearance</span></div>
-          <div class="flex gap-4 p-4 rounded-xl border border-white/5 bg-ink-800/30"><span class="text-gold-500 font-bold text-sm w-6">03</span><span class="text-sm text-slate-300">Member orientation, dimensions and levels</span></div>
-          <div class="flex gap-4 p-4 rounded-xl border border-white/5 bg-ink-800/30"><span class="text-gold-500 font-bold text-sm w-6">04</span><span class="text-sm text-slate-300">Clashes and erection feasibility</span></div>
-          <div class="flex gap-4 p-4 rounded-xl border border-white/5 bg-ink-800/30"><span class="text-gold-500 font-bold text-sm w-6">05</span><span class="text-sm text-slate-300">Drawing clarity and conflicting information</span></div>
-        </div>
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-num">01</div>
+          <h3>Tekla 3D Modelling</h3>
+          <p>Coordinated structural-steel models with clear member orientation, levels and interfaces before drawing production.</p>
+          <a href="#contact">Discuss this service →</a>
+        </article>
+        <article class="service-card reveal" style="transition-delay:0.05s">
+          <div class="service-num">02</div>
+          <h3>Shop & Fabrication Drawings</h3>
+          <p>Assembly and single-part drawings that communicate how each piece is cut, welded, bolted and assembled.</p>
+          <a href="#contact">Discuss this service →</a>
+        </article>
+        <article class="service-card reveal" style="transition-delay:0.1s">
+          <div class="service-num">03</div>
+          <h3>GA & Erection Drawings</h3>
+          <p>Clear member identification, dimensions and levels to support site coordination and the erection sequence.</p>
+          <a href="#contact">Discuss this service →</a>
+        </article>
+        <article class="service-card reveal" style="transition-delay:0.15s">
+          <div class="service-num">04</div>
+          <h3>Connection Detailing</h3>
+          <p>Translate approved connection requirements into legible model and drawing details, with access and tool clearance in mind.</p>
+          <a href="#contact">Discuss this service →</a>
+        </article>
+        <article class="service-card reveal" style="transition-delay:0.2s">
+          <div class="service-num">05</div>
+          <h3>BOM & MTO Reporting</h3>
+          <p>Organised material quantities, bolt lists and agreed production files drawn from the coordinated model.</p>
+          <a href="#contact">Discuss this service →</a>
+        </article>
+        <article class="service-card reveal" style="transition-delay:0.25s">
+          <div class="service-num">06</div>
+          <h3>As-Built & Retrofitting</h3>
+          <p>Accurate as-built documentation and practical retrofitting designs for existing RCC and steel structures.</p>
+          <a href="#contact">Discuss this service →</a>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+  <section id="projects">
+    <div class="section-inner">
+      <div class="projects-header">
         <div class="reveal">
-          <p class="text-gold-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">03 / Project Experience</p>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">The work, in detail.</h2>
+          <p class="section-label">02 / Project Experience</p>
+          <h2 class="section-title">The work, in detail.</h2>
         </div>
-        <div class="reveal flex flex-wrap gap-2" style="transition-delay:0.1s">
-          <button class="filter-btn active px-4 py-2 rounded-lg text-xs font-medium bg-gold-500 text-ink-900" data-filter="all">All</button>
-          <button class="filter-btn px-4 py-2 rounded-lg text-xs font-medium border border-white/10 text-slate-400 hover:border-gold-500/40 hover:text-gold-400 transition" data-filter="industrial">Industrial</button>
-          <button class="filter-btn px-4 py-2 rounded-lg text-xs font-medium border border-white/10 text-slate-400 hover:border-gold-500/40 hover:text-gold-400 transition" data-filter="multistorey">Multi-storey</button>
-          <button class="filter-btn px-4 py-2 rounded-lg text-xs font-medium border border-white/10 text-slate-400 hover:border-gold-500/40 hover:text-gold-400 transition" data-filter="portal">Portal / PEB</button>
+        <div class="filter-bar reveal" style="transition-delay:0.08s">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="industrial">Industrial</button>
+          <button class="filter-btn" data-filter="multistorey">Multi-storey</button>
+          <button class="filter-btn" data-filter="portal">Portal / PEB</button>
         </div>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="project-grid">
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="industrial portal">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-01.jpg" alt="Multi-bay industrial shed" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Industrial</span><span>·</span><span>PEB & Portal</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Multi-bay Industrial Shed</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Large industrial portal-frame structure with coordinated roof and wall systems.</p>
+
+      <div class="projects-grid">
+        <article class="project-card reveal" data-category="industrial portal">
+          <div class="img-wrap"><img src="images/project-01.jpg" alt="Multi-bay industrial shed" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Industrial</span> · PEB & Portal</div>
+            <h3>Multi-bay Industrial Shed</h3>
+            <p>Large industrial portal-frame structure with coordinated roof and wall systems.</p>
           </div>
         </article>
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="industrial" style="transition-delay:0.05s">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-02.jpg" alt="Complex roof framing" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Industrial</span><span>·</span><span>Roof Framing</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Complex Roof Framing System</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Intricate truss and purlin arrangement for large-span industrial roof.</p>
+        <article class="project-card reveal" data-category="industrial" style="transition-delay:0.05s">
+          <div class="img-wrap"><img src="images/project-02.jpg" alt="Complex roof framing" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Industrial</span> · Roof Framing</div>
+            <h3>Complex Roof Framing System</h3>
+            <p>Intricate truss and purlin arrangement for large-span industrial roof.</p>
           </div>
         </article>
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="multistorey" style="transition-delay:0.1s">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-04.jpg" alt="Multi-storey steel frame" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Multi-storey</span><span>·</span><span>Beam & Column</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Multi-storey Steel Frame</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Tall framed structure with intermediate floors, bracing and stair cores.</p>
+        <article class="project-card reveal" data-category="multistorey" style="transition-delay:0.1s">
+          <div class="img-wrap"><img src="images/project-04.jpg" alt="Multi-storey steel frame" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Multi-storey</span> · Beam & Column</div>
+            <h3>Multi-storey Steel Frame</h3>
+            <p>Tall framed structure with intermediate floors, bracing and stair cores.</p>
           </div>
         </article>
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="multistorey" style="transition-delay:0.15s">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-05.jpg" alt="Braced multi-storey" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Multi-storey</span><span>·</span><span>Braced Frame</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Braced Multi-storey Building</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Vertical braced system with clear floor framing and connection coordination.</p>
+        <article class="project-card reveal" data-category="multistorey" style="transition-delay:0.15s">
+          <div class="img-wrap"><img src="images/project-05.jpg" alt="Braced multi-storey" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Multi-storey</span> · Braced Frame</div>
+            <h3>Braced Multi-storey Building</h3>
+            <p>Vertical braced system with clear floor framing and connection coordination.</p>
           </div>
         </article>
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="portal industrial" style="transition-delay:0.2s">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-06.jpg" alt="Extended portal frame" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Industrial</span><span>·</span><span>Portal Frame</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Extended Portal Frame Shed</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Long-span industrial building with multiple bays and secondary framing.</p>
+        <article class="project-card reveal" data-category="portal industrial" style="transition-delay:0.2s">
+          <div class="img-wrap"><img src="images/project-06.jpg" alt="Extended portal frame" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Industrial</span> · Portal Frame</div>
+            <h3>Extended Portal Frame Shed</h3>
+            <p>Long-span industrial building with multiple bays and secondary framing.</p>
           </div>
         </article>
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="multistorey" style="transition-delay:0.25s">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-08.jpg" alt="Fully coordinated high-rise" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Multi-storey</span><span>·</span><span>Full Coordination</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Fully Coordinated High-Rise Frame</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Complete 3D model with stairs, floors, bracing and secondary steel.</p>
+        <article class="project-card reveal" data-category="multistorey" style="transition-delay:0.25s">
+          <div class="img-wrap"><img src="images/project-08.jpg" alt="Fully coordinated high-rise" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Multi-storey</span> · Full Coordination</div>
+            <h3>Fully Coordinated High-Rise Frame</h3>
+            <p>Complete 3D model with stairs, floors, bracing and secondary steel.</p>
           </div>
         </article>
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="industrial" style="transition-delay:0.3s">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-11.jpg" alt="Large-span industrial" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Industrial</span><span>·</span><span>Large Span</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Large-Span Industrial Structure</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Wide-span building with clear column grid and roof secondary members.</p>
+        <article class="project-card reveal" data-category="industrial" style="transition-delay:0.3s">
+          <div class="img-wrap"><img src="images/project-11.jpg" alt="Large-span industrial" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Industrial</span> · Large Span</div>
+            <h3>Large-Span Industrial Structure</h3>
+            <p>Wide-span building with clear column grid and roof secondary members.</p>
           </div>
         </article>
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="industrial portal" style="transition-delay:0.35s">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-12.jpg" alt="Warehouse frame" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Industrial</span><span>·</span><span>Warehouse</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Extended Warehouse Frame</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Long industrial warehouse with multi-bay portal frames and mezzanine area.</p>
+        <article class="project-card reveal" data-category="industrial portal" style="transition-delay:0.35s">
+          <div class="img-wrap"><img src="images/project-12.jpg" alt="Warehouse frame" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Industrial</span> · Warehouse</div>
+            <h3>Extended Warehouse Frame</h3>
+            <p>Long industrial warehouse with multi-bay portal frames and mezzanine area.</p>
           </div>
         </article>
-        <article class="project-card reveal group rounded-2xl overflow-hidden border border-white/5 bg-ink-800/40" data-category="multistorey" style="transition-delay:0.4s">
-          <div class="aspect-[4/3] overflow-hidden bg-ink-900"><img src="images/project-07.jpg" alt="Steel frame with podium" class="w-full h-full object-cover" loading="lazy" /></div>
-          <div class="p-5">
-            <div class="flex items-center gap-2 text-[11px] text-slate-500 mb-2 tracking-wide uppercase"><span class="text-gold-500/80">Multi-storey</span><span>·</span><span>Mixed Use</span></div>
-            <h3 class="font-semibold text-[15px] mb-1.5 group-hover:text-gold-400 transition">Steel Frame with Podium Level</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Multi-level structure featuring a lower podium and upper tower framing.</p>
+        <article class="project-card reveal" data-category="multistorey" style="transition-delay:0.4s">
+          <div class="img-wrap"><img src="images/project-07.jpg" alt="Steel frame with podium" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags"><span class="cat">Multi-storey</span> · Mixed Use</div>
+            <h3>Steel Frame with Podium Level</h3>
+            <p>Multi-level structure featuring a lower podium and upper tower framing.</p>
           </div>
         </article>
       </div>
-      <p class="mt-12 text-center text-xs text-slate-500 reveal">Selected 3D model views only. Fabrication, connection and erection drawing packages remain outside the public portfolio.</p>
+      <p class="note reveal">Selected 3D model views only. Fabrication and connection drawing packages remain confidential.</p>
     </div>
   </section>
 
   <!-- PROCESS -->
-  <section id="process" class="py-24 lg:py-32 border-t border-white/5 bg-ink-900/30">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="max-w-2xl mb-16 reveal">
-        <p class="text-gold-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">04 / A Traceable Process</p>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">Resolve the questions.<br>Coordinate the steel.</h2>
+  <section id="process" style="background: color-mix(in srgb, var(--surface) 40%, transparent); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-label">03 / A Traceable Process</p>
+        <h2 class="section-title">Resolve the questions.<br>Coordinate the steel.</h2>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="reveal relative p-6 rounded-2xl border border-white/5 bg-ink-800/30">
-          <div class="text-5xl font-black text-white/5 absolute top-4 right-5">01</div>
-          <h3 class="font-semibold text-lg mb-3 relative">Review</h3>
-          <p class="text-sm text-slate-400 leading-relaxed relative">Examine supplied engineering drawings, specifications and scope. Identify missing dimensions, levels and interfaces before modelling starts.</p>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="num">01</div>
+          <h3>Review</h3>
+          <p>Examine supplied engineering drawings, specifications and scope. Identify missing dimensions, levels and interfaces before modelling starts.</p>
         </div>
-        <div class="reveal relative p-6 rounded-2xl border border-white/5 bg-ink-800/30" style="transition-delay:0.08s">
-          <div class="text-5xl font-black text-white/5 absolute top-4 right-5">02</div>
-          <h3 class="font-semibold text-lg mb-3 relative">Coordinate</h3>
-          <p class="text-sm text-slate-400 leading-relaxed relative">Build the 3D Tekla model against agreed information, coordinate member geometry, and raise focused RFIs to confirm unclear requirements.</p>
+        <div class="process-step reveal" style="transition-delay:0.08s">
+          <div class="num">02</div>
+          <h3>Coordinate</h3>
+          <p>Build the 3D Tekla model against agreed information, coordinate member geometry, and raise focused RFIs to confirm unclear requirements.</p>
         </div>
-        <div class="reveal relative p-6 rounded-2xl border border-white/5 bg-ink-800/30" style="transition-delay:0.16s">
-          <div class="text-5xl font-black text-white/5 absolute top-4 right-5">03</div>
-          <h3 class="font-semibold text-lg mb-3 relative">Detail & Check</h3>
-          <p class="text-sm text-slate-400 leading-relaxed relative">Detail connections with tool clearance and welding access in mind. Perform internal checks across marks, dimensions, orientation and clashes.</p>
+        <div class="process-step reveal" style="transition-delay:0.16s">
+          <div class="num">03</div>
+          <h3>Detail & Check</h3>
+          <p>Detail connections with tool clearance and welding access in mind. Perform internal checks across marks, dimensions, orientation and clashes.</p>
         </div>
-        <div class="reveal relative p-6 rounded-2xl border border-white/5 bg-ink-800/30" style="transition-delay:0.24s">
-          <div class="text-5xl font-black text-white/5 absolute top-4 right-5">04</div>
-          <h3 class="font-semibold text-lg mb-3 relative">Issue & Revise</h3>
-          <p class="text-sm text-slate-400 leading-relaxed relative">Deliver agreed fabrication drawings, erection plans, MTO reports and supporting files. Maintain disciplined revision records as changes occur.</p>
+        <div class="process-step reveal" style="transition-delay:0.24s">
+          <div class="num">04</div>
+          <h3>Issue & Revise</h3>
+          <p>Deliver agreed fabrication drawings, erection plans, MTO reports and supporting files. Maintain disciplined revision records as changes occur.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-        <div class="reveal relative">
-          <div class="absolute -inset-4 bg-gradient-to-br from-gold-500/15 to-transparent rounded-3xl blur-2xl"></div>
-          <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <img src="images/profile.jpg" alt="Badsha Faysal" class="w-full aspect-[4/5] object-cover object-top" />
-          </div>
+  <section id="about">
+    <div class="section-inner about-grid">
+      <div class="reveal about-photo">
+        <img src="images/profile.jpg" alt="Badsha Faysal" />
+      </div>
+      <div class="reveal" style="transition-delay:0.1s">
+        <p class="section-label">04 / The Detailer Behind the Model</p>
+        <h2 class="section-title" style="margin-bottom:0.25rem">Badsha Faysal</h2>
+        <p style="color:var(--gold); font-size:0.9rem; font-weight:500; margin-bottom:1.25rem">Senior Structural Detailer (Steel & Civil)</p>
+        <p style="color:var(--muted); margin-bottom:1rem">
+          Based in Dhaka, Bangladesh, I bring over 8.5 years of experience across structural steel fabrication detailing, as-built & retrofitting drawing preparation, and on-site construction quality control.
+        </p>
+        <p style="color:var(--muted); margin-bottom:1.5rem">
+          That background informs a practical approach to model coordination and fabrication documentation using Tekla Structures and AutoCAD — serving major industrial clients including NRG Spinning Mills, AG Ceramics, Sheltech Ceramics and Paragon Group.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong>8.5+</strong><span>Years Experience</span></div>
+          <div class="stat"><strong>100+</strong><span>Sites Supervised</span></div>
         </div>
-        <div class="reveal" style="transition-delay:0.1s">
-          <p class="text-gold-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">05 / The Detailer Behind the Model</p>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-2">Badsha Faysal</h2>
-          <p class="text-gold-400/80 text-sm font-medium mb-6">Senior Structural Detailer (Steel & Civil)</p>
-          <p class="text-slate-400 leading-relaxed mb-5">
-            Based in Dhaka, Bangladesh, I bring over 8.5 years of experience across structural steel fabrication detailing, as-built & retrofitting drawing preparation, and on-site construction quality control.
-          </p>
-          <p class="text-slate-400 leading-relaxed mb-8">
-            That background informs a practical approach to model coordination and fabrication documentation using Tekla Structures and AutoCAD — serving major industrial clients including NRG Spinning Mills, AG Ceramics, Sheltech Ceramics and Paragon Group.
-          </p>
-          <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="p-4 rounded-xl border border-white/5 bg-ink-800/40">
-              <div class="text-2xl font-bold text-gold-400">8.5+</div>
-              <div class="text-xs text-slate-500 mt-1">Years Experience</div>
-            </div>
-            <div class="p-4 rounded-xl border border-white/5 bg-ink-800/40">
-              <div class="text-2xl font-bold text-gold-400">100+</div>
-              <div class="text-xs text-slate-500 mt-1">Sites Supervised</div>
-            </div>
-          </div>
-          <div class="space-y-3 text-sm">
-            <div class="flex gap-4"><span class="text-slate-500 w-24 shrink-0">Software</span><span class="text-slate-300">Tekla Structures · AutoCAD · SketchUp · ETABS</span></div>
-            <div class="flex gap-4"><span class="text-slate-500 w-24 shrink-0">Education</span><span class="text-slate-300">B.Sc. Civil Engineering · Diploma in Civil</span></div>
-            <div class="flex gap-4"><span class="text-slate-500 w-24 shrink-0">Location</span><span class="text-slate-300">Shewrapara, Mirpur, Dhaka-1216</span></div>
-          </div>
+        <div class="meta-list">
+          <div><span class="label">Software</span><span>Tekla Structures · AutoCAD · SketchUp · ETABS</span></div>
+          <div><span class="label">Education</span><span>B.Sc. Civil Engineering · Diploma in Civil</span></div>
+          <div><span class="label">Location</span><span>Shewrapara, Mirpur, Dhaka-1216</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-24 lg:py-32 border-t border-white/5 bg-ink-900/40">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="max-w-2xl mx-auto text-center mb-14 reveal">
-        <p class="text-gold-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">06 / Let’s Review the Steelwork</p>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Need reliable detailing capacity for an upcoming steel project?</h2>
-        <p class="text-slate-400">Send the drawings or scope and I’ll review what’s required.</p>
+  <section id="contact" style="background: color-mix(in srgb, var(--surface) 40%, transparent); border-top: 1px solid var(--border);">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center; margin-bottom:2.5rem">
+        <p class="section-label">05 / Let’s Review the Steelwork</p>
+        <h2 class="section-title">Need reliable detailing capacity<br>for an upcoming steel project?</h2>
+        <p class="section-desc" style="margin:0 auto">Send the drawings or scope and I’ll review what’s required.</p>
       </div>
-      <div class="grid lg:grid-cols-5 gap-10 max-w-5xl mx-auto">
-        <div class="lg:col-span-2 space-y-6 reveal">
-          <a href="mailto:badshafaysal55@gmail.com" class="flex items-start gap-4 p-4 rounded-xl border border-white/5 hover:border-gold-500/30 transition group">
-            <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+
+      <div class="contact-grid">
+        <div class="contact-links reveal">
+          <a href="mailto:badshafaysal55@gmail.com" class="contact-link">
+            <div class="icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-medium group-hover:text-gold-400 transition">Email</div>
-              <div class="text-sm text-slate-400 mt-0.5">badshafaysal55@gmail.com</div>
+              <strong>Email</strong>
+              <span>badshafaysal55@gmail.com</span>
             </div>
           </a>
-          <a href="tel:+8801745459928" class="flex items-start gap-4 p-4 rounded-xl border border-white/5 hover:border-gold-500/30 transition group">
-            <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <a href="tel:+8801745459928" class="contact-link">
+            <div class="icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-medium group-hover:text-gold-400 transition">Phone / WhatsApp</div>
-              <div class="text-sm text-slate-400 mt-0.5">+880 1745-459928</div>
+              <strong>Phone / WhatsApp</strong>
+              <span>+880 1745-459928</span>
             </div>
           </a>
-          <div class="flex items-start gap-4 p-4 rounded-xl border border-white/5">
-            <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <a href="https://www.linkedin.com/in/b-faysal" target="_blank" rel="noopener" class="contact-link">
+            <div class="icon">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-medium">Location</div>
-              <div class="text-sm text-slate-400 mt-0.5">Shewrapara, Mirpur<br>Dhaka-1216, Bangladesh</div>
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/b-faysal</span>
+            </div>
+          </a>
+          <div class="contact-link" style="cursor:default">
+            <div class="icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <strong>Location</strong>
+              <span>Shewrapara, Mirpur, Dhaka-1216</span>
             </div>
           </div>
         </div>
-        <div class="lg:col-span-3 reveal" style="transition-delay:0.1s">
-          <form class="p-6 sm:p-8 rounded-2xl border border-white/5 bg-ink-800/30 space-y-5" onsubmit="event.preventDefault(); alert('Please email me directly at badshafaysal55@gmail.com. Formspree can be connected later for free.');">
-            <div class="grid sm:grid-cols-2 gap-5">
-              <div>
-                <label class="block text-xs font-medium text-slate-400 mb-1.5">Name</label>
-                <input type="text" required class="w-full px-4 py-3 rounded-xl bg-ink-900 border border-white/10 focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 outline-none transition text-sm" placeholder="Your name" />
-              </div>
-              <div>
-                <label class="block text-xs font-medium text-slate-400 mb-1.5">Email</label>
-                <input type="email" required class="w-full px-4 py-3 rounded-xl bg-ink-900 border border-white/10 focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 outline-none transition text-sm" placeholder="you@company.com" />
-              </div>
+
+        <form class="contact-form reveal" style="transition-delay:0.1s" onsubmit="event.preventDefault(); window.location.href='mailto:badshafaysal55@gmail.com?subject=Project%20Enquiry&body=' + encodeURIComponent(document.getElementById('msg').value);">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" required placeholder="Your name" />
             </div>
-            <div>
-              <label class="block text-xs font-medium text-slate-400 mb-1.5">Project / Message</label>
-              <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-ink-900 border border-white/10 focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 outline-none transition text-sm resize-none" placeholder="Briefly describe the project or what you need..."></textarea>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="you@company.com" />
             </div>
-            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl btn-primary text-sm">Send Message</button>
-            <p class="text-xs text-slate-500">Or email directly: <a href="mailto:badshafaysal55@gmail.com" class="text-gold-400 hover:underline">badshafaysal55@gmail.com</a></p>
-          </form>
-        </div>
+          </div>
+          <div class="form-group" style="margin-bottom:1.25rem">
+            <label>Project / Message</label>
+            <textarea id="msg" name="message" required placeholder="Briefly describe the project or what you need..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p style="font-size:0.75rem; color:var(--muted); margin-top:0.75rem">
+            Or email directly: <a href="mailto:badshafaysal55@gmail.com" style="color:var(--gold)">badshafaysal55@gmail.com</a>
+          </p>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/5 py-10">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-2.5">
-          <div class="w-7 h-7 rounded-md bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-ink-900 font-bold text-xs">BF</div>
-          <span class="font-semibold text-sm">Badsha Faysal</span>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo" style="gap:0.5rem">
+        <div class="logo-mark" style="width:28px;height:28px;border-radius:7px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px">
+            <path d="M4 6h16M4 12h16M4 18h16"/><path d="M8 6v12M16 6v12"/><path d="M4 6l4-3h8l4 3"/>
+          </svg>
         </div>
-        <p class="text-xs text-slate-500 text-center">© 2026 Badsha Faysal · Senior Structural Detailer · Dhaka, Bangladesh</p>
-        <div class="flex gap-5 text-xs text-slate-500">
-          <a href="#home" class="hover:text-gold-400 transition">Home</a>
-          <a href="#projects" class="hover:text-gold-400 transition">Projects</a>
-          <a href="#contact" class="hover:text-gold-400 transition">Contact</a>
-        </div>
+        <strong style="font-size:0.85rem">Badsha Faysal</strong>
+      </div>
+      <p>© 2026 Badsha Faysal · Senior Structural Detailer · Dhaka</p>
+      <div style="display:flex; gap:1.25rem">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/b-faysal" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
   <script>
-    const html = document.documentElement;
-    const themeToggle = document.getElementById('theme-toggle');
-    if (localStorage.theme === 'light') html.classList.remove('dark');
-    else html.classList.add('dark');
-    themeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
-    });
+    // Theme icon swap
+    const themeBtn = document.getElementById('theme-toggle');
+    function updateThemeIcons() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const sun = themeBtn?.querySelector('.sun');
+      const moon = themeBtn?.querySelector('.moon');
+      if (sun && moon) {
+        sun.style.display = isDark ? 'block' : 'none';
+        moon.style.display = isDark ? 'none' : 'block';
+      }
+    }
+    updateThemeIcons();
+    themeBtn?.addEventListener('click', () => setTimeout(updateThemeIcons, 10));
 
-    const mobileBtn = document.getElementById('mobile-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.project-card');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => {
-          b.classList.remove('active', 'bg-gold-500', 'text-ink-900');
-          b.classList.add('border', 'border-white/10', 'text-slate-400');
-        });
-        btn.classList.add('active', 'bg-gold-500', 'text-ink-900');
-        btn.classList.remove('border', 'border-white/10', 'text-slate-400');
-        const f = btn.dataset.filter;
-        cards.forEach(c => { c.style.display = (f === 'all' || c.dataset.category.includes(f)) ? '' : 'none'; });
-      });
-    });
+    // Mobile menu visibility on large screens
+    function handleResize() {
+      const btn = document.getElementById('mobile-btn');
+      if (window.innerWidth >= 1024) {
+        btn.style.display = 'none';
+        document.getElementById('mobile-menu')?.classList.remove('open');
+      } else {
+        btn.style.display = 'flex';
+      }
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
   </script>
 </body>
 </html>

@@ -2,51 +2,56 @@
 
 Modern personal portfolio for **Badsha Faysal**, Senior Structural Detailer (Steel & Civil).
 
+## Folder Structure (easy daily updates)
+
+```
+badsha-portfolio/
+├── index.html          ← Main page
+├── css/
+│   └── style.css       ← All styles
+├── js/
+│   └── main.js         ← Theme, filters, animations
+├── images/             ← Project photos & profile
+├── videos/             ← 3D model reels
+├── icons/              ← (optional extra icons)
+├── posts/              ← Daily work updates (future)
+└── README.md
+```
+
 ## Features
-- Fully responsive
-- Dark / Light mode toggle
+- Real 3D video reel in hero (auto-plays when visible)
+- Dark / Light mode
 - Project filter (Industrial / Multi-storey / Portal)
-- Clean professional design inspired by modern engineering portfolios
-- Fast static site (ready for free hosting)
+- LinkedIn + Email + Phone + WhatsApp contact icons
+- Clean steel-structure logo
+- Smooth scroll animations
+- Fully responsive
+- Ready for free hosting
 
 ## Free Publishing (GitHub Pages)
 
-### Option A — Recommended (badshafaysal.github.io)
+1. Create GitHub account → New repository named: **`badshafaysal.github.io`**
+2. Upload **all folders and files** from this package
+3. Settings → Pages → Deploy from branch `main` / root
+4. Site live at: **https://badshafaysal.github.io**
 
-1. Create a free GitHub account if you don’t have one.
-2. Create a **new repository** named exactly:  
-   `badshafaysal.github.io`
-3. Upload **all files** from this folder (index.html + images folder) to the repository.
-4. Go to **Settings → Pages**  
-   - Source: Deploy from a branch  
-   - Branch: `main` (or `master`) → `/ (root)`
-5. Wait 1–2 minutes. Your site will be live at:  
-   **https://badshafaysal.github.io**
+## How to update daily
 
-### Option B — Project style
-Repository name can be anything (e.g. `portfolio`).  
-Site will be at: `https://YOURUSERNAME.github.io/portfolio`
+### Add a new project image
+1. Put the image in `images/` (e.g. `project-14.jpg`)
+2. Copy one of the existing project cards in `index.html` and change the image path + text
 
-## Cloudflare Pages (also free)
-1. Go to https://pages.cloudflare.com
-2. Connect GitHub or upload the folder directly
-3. Deploy → get a free `*.pages.dev` link
+### Add a new video
+1. Put the video in `videos/`
+2. Update the `<video src="...">` in the hero section of `index.html`
 
-## Custom Domain later
-After the free version is live, you can buy a domain (e.g. badshafaysal.com) and point it to GitHub Pages or Cloudflare for free.
+### Future daily posts
+You can later add simple HTML files inside `posts/` and link them from the main page.
 
-## Contact Form
-The contact form currently uses a placeholder.  
-To make it work for free:
-1. Go to https://formspree.io and create a free account
-2. Create a new form
-3. Replace `YOUR_FORM_ID` in index.html with your Formspree form ID
-
-## Editing Content
-- Open `index.html` in any code editor
-- Change project titles, descriptions, text as needed
-- Replace images in the `images/` folder (keep the same file names or update the HTML)
+## Contact form
+Currently opens your email app.  
+For a real form later: use free Formspree and replace the form action.
 
 ---
 
-Built for free · Ready to publish · Fully editable
+Built for free · Modular · Easy to update
